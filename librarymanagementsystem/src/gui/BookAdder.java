@@ -9,45 +9,48 @@ import javax.swing.SpringLayout;
 
 public class BookAdder extends JFrame {
 
-	public BookAdder() {
-		JPanel panel = new JPanel();
-		panel.setLayout(new SpringLayout());
-		
-		JLabel labelID = new  JLabel("ID:", JLabel.TRAILING);
-		JTextField fieldID = new JTextField(10);
-		labelID.setLabelFor(fieldID);
-		panel.add(labelID);
-		panel.add(fieldID);
-		
-		JLabel labelName = new  JLabel("Name:", JLabel.TRAILING);
-		JTextField fieldName = new JTextField(10);
-		labelName.setLabelFor(fieldName);
-		panel.add(labelName);
-		panel.add(fieldName);
-		
-		JLabel labelEmail = new  JLabel("Email:", JLabel.TRAILING);
-		JTextField fieldEmail = new JTextField(10);
-		labelEmail.setLabelFor(fieldEmail);
-		panel.add(labelEmail);
-		panel.add(fieldEmail);
-		
+    public BookAdder() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new SpringLayout());
 
-		JLabel labelPhone = new  JLabel("Phone:", JLabel.TRAILING);
-		JTextField fieldPhone = new JTextField(10);
-		labelPhone.setLabelFor(fieldPhone);
-		panel.add(labelPhone);
-		panel.add(fieldPhone);
-		
-		panel.add(new JButton("save"));
-		panel.add(new JButton("cancel"));
-		
-		SpringUtilities.makeCompactGrid(panel, 1, 4, 6, 6, 6, 6);
-		//SpringUtiliti 클래스 있어야 
-		this.setSize(300, 300);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		this.setContentPane(panel);
-		this.setVisible(true);
-	}
-	
+        JLabel labelID = new JLabel("User ID:", JLabel.TRAILING);
+        JTextField fieldID = new JTextField(10);
+        labelID.setLabelFor(fieldID);
+        panel.add(labelID);
+        panel.add(fieldID);
+
+        JLabel labelTitle = new JLabel("Title:", JLabel.TRAILING);
+        JTextField fieldTitle = new JTextField(10);
+        labelTitle.setLabelFor(fieldTitle);
+        panel.add(labelTitle);
+        panel.add(fieldTitle);
+
+        JLabel labelBookId = new JLabel("Book Id:", JLabel.TRAILING);
+        JTextField fieldBookId = new JTextField(10);
+        labelBookId.setLabelFor(fieldBookId);
+        panel.add(labelBookId);
+        panel.add(fieldBookId);
+
+        JLabel labelDate = new JLabel("Lending Date:", JLabel.TRAILING);
+        JTextField fieldDate = new JTextField(10);
+        labelDate.setLabelFor(fieldDate);
+        panel.add(labelDate);
+        panel.add(fieldDate);
+
+        JButton saveButton = new JButton("Save");
+        JButton cancelButton = new JButton("Cancel");
+
+        panel.add(saveButton);
+        panel.add(cancelButton);
+
+        // 그리드 레이아웃 적용
+        SpringUtilities.makeCompactGrid(panel, 5, 2, 6, 6, 6, 6);
+
+        this.setSize(300, 200);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.setContentPane(panel);
+        this.setVisible(true);
+    }
+
 }

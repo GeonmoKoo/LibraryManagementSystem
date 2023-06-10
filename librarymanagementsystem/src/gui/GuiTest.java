@@ -6,7 +6,7 @@ public class GuiTest {
 
 	//MenuSelection menuselection = new MenuSelection();
 	//BookAdder bookadder = new BookAdder();
-		BookViewer bookviewer = new BookViewer();
+		//BookViewer bookviewer = new BookViewer();
 	}
 
 }

@@ -6,6 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import book.AcademicBook;
+import book.Book;
 import book.BookInput;
 import book.BookKind;
 import book.ChildrenBook;
@@ -146,6 +147,15 @@ public class BooksManager implements Serializable {
     	}    	
     }
     
+    public int size() {
+    	return books.size();
+    }
+    
+    public BookInput get(int index) {
+    	return (Book) books.get(index);
+    }
+    
+    
     public void showEditMenu() {
     	System.out.println("** Book Info Edit Menu **");
 		System.out.println("1. Edit Title");
@@ -154,4 +164,5 @@ public class BooksManager implements Serializable {
 		System.out.println("4. Exit");
 		System.out.println("Select one number between 1 - 4:");    	
     }
+
 }
